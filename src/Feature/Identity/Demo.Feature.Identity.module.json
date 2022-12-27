@@ -1,0 +1,14 @@
+{
+  "namespace": "Demo.Feature.Identity",
+  "items": {
+    "includes": [
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Demo.Feature.Identity.Templates",
+        "path": "/sitecore/templates/Feature/Identity/_Identity",
+        "scope": "itemAndDescendants"
+      }
+    ]
+  }
+}
