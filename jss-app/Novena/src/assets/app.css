@@ -26,3 +26,6 @@ a[target='_blank']:after {
     font-weight: 300;
     line-height: 1.2;
 }
+.features {
+  position: relative;
+}

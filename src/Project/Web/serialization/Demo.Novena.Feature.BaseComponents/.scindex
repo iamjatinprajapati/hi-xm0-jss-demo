@@ -1,0 +1,28 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Feature.BaseComponents\Base Components\Teaser.yml
+ID: "c4d576e5-dbd4-485c-af0e-c424a3f82a78"
+Parent: "1c8aee8f-f212-4638-813f-dbaf3efbafa7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/Base Components/Teaser
+Signature: PTU/W2Wy6wULXe0dh2eCienmmq1F76vLl3MfJr2o+8g=
+Modified: 638078396940052771
+---
+File: |
+  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Feature.BaseComponents\Base Components.yml
+ID: "1c8aee8f-f212-4638-813f-dbaf3efbafa7"
+Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Feature/Base Components
+Signature: C3l+5y9VEK7d0D8ZJmbmY9zj1kYLxJ7J+dfdvz/aFvA=
+Modified: 638078396939932557
+---
+File: |
+  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Feature.BaseComponents\Base Components\Hero.yml
+ID: "5dc6a6d7-19d7-418c-ab84-7ce5c38aaf68"
+Parent: "1c8aee8f-f212-4638-813f-dbaf3efbafa7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/Base Components/Hero
+Signature: W04nVur5t8Xpq675CvWlMZChPaX+qv2AImMLzMpU5MQ=
+Modified: 638078396939996726

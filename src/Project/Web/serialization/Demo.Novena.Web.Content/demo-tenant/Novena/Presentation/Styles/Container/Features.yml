@@ -1,17 +1,15 @@
 ﻿---
-ID: "f98b7bb4-2216-4466-831b-7e0951ac442d"
-Parent: "99986036-2dec-4b8f-a184-c4a93c738ca9"
-Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
-Path: "/sitecore/content/demo-tenant/Novena/Presentation/Available Renderings/Novena"
+ID: "a894f98a-b443-4be5-a45d-0885230d06f4"
+Parent: "c965b69e-1886-4f60-b33f-315ff719e5c1"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/demo-tenant/Novena/Presentation/Styles/Container/Features"
 SharedFields:
-- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
-  Hint: Renderings
-  Value: |
-    {333A8E2A-1A70-4E51-A73F-3626D35AA9C0}
-    {45331511-A8E2-4A5C-B788-769B80989DAB}
-    {9A95592F-B107-4CEC-988B-25BAFD178D6B}
-    {5DC6A6D7-19D7-418C-AB84-7CE5C38AAF68}
-    {C4D576E5-DBD4-485C-AF0E-C424A3F82A78}
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: features
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: "{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
 Languages:
 - Language: en
   Versions:
@@ -19,7 +17,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221227T101645Z
+      Value: 20221228T152805Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -30,11 +28,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5eedd2be-a346-4cf7-9770-95f3bb542237"
+      Value: "e6c05fd9-7c65-4e80-bb2b-5b7415c040bf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221228T152322Z
+      Value: 20221228T152825Z

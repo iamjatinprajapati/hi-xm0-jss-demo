@@ -43,6 +43,13 @@
         "name": "Demo.Novena.Web.Renderings",
         "path": "/sitecore/layout/Renderings/Project/demo-tenant",
         "scope": "itemAndDescendants"
+      },
+      {
+        "allowedPushOperations": "createUpdateAndDelete",
+        "database": "master",
+        "name": "Demo.Novena.Feature.BaseComponents",
+        "path": "/sitecore/layout/Renderings/Feature/Base Components",
+        "scope": "itemAndDescendants"
       }
     ]
   }

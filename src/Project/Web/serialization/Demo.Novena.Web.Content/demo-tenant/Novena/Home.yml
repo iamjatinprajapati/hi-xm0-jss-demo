@@ -24,12 +24,35 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{08E58CB1-B072-456E-9182-4555AA8BE233}"
+              p:before="*"
+              s:ds="{3A30F6D0-72CA-405C-AEB9-09C8351CB789}"
+              s:id="{C4D576E5-DBD4-485C-AF0E-C424A3F82A78}"
+              s:par=""
+              s:ph="/headless-main/container-1"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{0486EA62-A6A3-4AAE-ADBA-F6B0322F0184}"
+              p:after="r[@uid='{08E58CB1-B072-456E-9182-4555AA8BE233}']"
+              s:ds="{0097D7CF-7518-4063-80C3-680210348E33}"
+              s:id="{C4D576E5-DBD4-485C-AF0E-C424A3F82A78}"
+              s:par=""
+              s:ph="/headless-main/container-1"
+              s:ccb="Clear on publish" />
+            <r
               uid="{5A3E968F-69FE-4FE1-94A0-4C50871CBA87}"
+              p:after="r[@uid='{0486EA62-A6A3-4AAE-ADBA-F6B0322F0184}']"
               s:ds="{E906DA6E-E8BD-4E01-99EF-560CB42AE2E8}"
               s:id="{5DC6A6D7-19D7-418C-AB84-7CE5C38AAF68}"
               s:par=""
               s:ph="headless-main"
               s:ccb="Clear on publish" />
+            <r
+              uid="{6A9DD2A7-E721-4F55-B30C-D6088EFB412A}"
+              p:after="*[1=2]"
+              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+              s:par="GridParameters&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7BA894F98A-B443-4BE5-A45D-0885230D06F4%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -51,11 +74,11 @@ Languages:
       Value: Novena
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e2f0581b-640d-4f87-ba2e-4de0a0bde877"
+      Value: "b054ecc9-f563-4025-938e-b95ae2de85b1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221228T143136Z
+      Value: 20221228T153655Z
