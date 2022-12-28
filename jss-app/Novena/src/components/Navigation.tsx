@@ -75,35 +75,97 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
     openMenu(!isOpenMenu);
   };
-
-  const list = Object.values(props.fields)
-    .filter((element) => element)
-    .map((element: Fields, key: number) => (
-      <NavigationList
-        key={`${key}${element.Id}`}
-        fields={element}
-        handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
-        relativeLevel={1}
-      />
-    ));
+  let list = undefined;
+  const addRoot = Object.values(props.fields).length === 1;
+  if (addRoot) {
+    list = Object.values(props.fields[0].Children)
+      .filter((element) => element)
+      .map((element: Fields, key: number) => (
+        <NavigationList
+          key={`${key}${element.Id}`}
+          fields={element}
+          handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
+          relativeLevel={1}
+        />
+      ));
+  } else {
+    list = Object.values(props.fields)
+      .filter((element) => element)
+      .map((element: Fields, key: number) => (
+        <NavigationList
+          key={`${key}${element.Id}`}
+          fields={element}
+          handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
+          relativeLevel={1}
+        />
+      ));
+  }
 
   return (
-    <div className={`component navigation ${styles}`} id={id ? id : undefined}>
-      <label className="menu-mobile-navigate-wrapper">
-        <input
-          type="checkbox"
-          className="menu-mobile-navigate"
-          checked={isOpenMenu}
-          onChange={() => handleToggleMenu()}
-        />
-        <div className="menu-humburger" />
-        <div className="component-content">
-          <nav>
-            <ul className="clearfix">{list}</ul>
-          </nav>
+    <>
+      <button
+        className="navbar-toggler collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarmain"
+        aria-controls="navbarmain"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="icofont-navigation-menu"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarmain">
+        <ul className="navbar-nav ml-auto">
+          {addRoot &&
+            ShowRootNode({
+              fields: props.fields[0],
+            })}
+          {list}
+        </ul>
+      </div>
+    </>
+    // <div className={`component navigation ${styles}`} id={id ? id : undefined}>
+    //   <label className="menu-mobile-navigate-wrapper">
+    //     <input
+    //       type="checkbox"
+    //       className="menu-mobile-navigate"
+    //       checked={isOpenMenu}
+    //       onChange={() => handleToggleMenu()}
+    //     />
+    //     <div className="menu-humburger" />
+    //     <div className="component-content">
+    //       <nav>
+    //         <ul className="clearfix">{list}</ul>
+    //       </nav>
+    //     </div>
+    //   </label>
+    // </div>
+  );
+};
+
+const ShowRootNode = (props: NavigationProps) => {
+  const { sitecoreContext } = useSitecoreContext();
+  return (
+    <>
+      <li
+        className={props.fields.Styles.concat('rel-level' + props.relativeLevel)
+          .concat('nav-item')
+          .join(' ')}
+        key={props.fields.Id}
+        tabIndex={0}
+      >
+        <div className="navigation-title">
+          <Link
+            className="nav-link"
+            field={getLinkField(props)}
+            editable={sitecoreContext.pageEditing}
+            onClick={props.handleClick}
+          >
+            {getNavigationText(props)}
+          </Link>
         </div>
-      </label>
-    </div>
+      </li>
+    </>
   );
 };
 
@@ -124,12 +186,15 @@ const NavigationList = (props: NavigationProps) => {
 
   return (
     <li
-      className={props.fields.Styles.concat('rel-level' + props.relativeLevel).join(' ')}
+      className={props.fields.Styles.concat('rel-level' + props.relativeLevel)
+        .concat('nav-item')
+        .join(' ')}
       key={props.fields.Id}
       tabIndex={0}
     >
       <div className="navigation-title">
         <Link
+          className="nav-link"
           field={getLinkField(props)}
           editable={sitecoreContext.pageEditing}
           onClick={props.handleClick}

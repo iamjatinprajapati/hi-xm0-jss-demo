@@ -8,7 +8,7 @@ const Header = ({ rendering }: HeaderProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
   return (
     <>
-      {/* <Placeholder name="novena-jss-header-top" rendering={rendering} /> */}
+      <Placeholder name="novena-jss-header-top" rendering={rendering} />
       <nav className="navbar navbar-expand-lg navigation" id="navbar">
         <div className={classNames('container', sitecoreContext.pageEditing ? '' : '')}>
           <Placeholder name="novena-jss-header-bottom" rendering={rendering} />

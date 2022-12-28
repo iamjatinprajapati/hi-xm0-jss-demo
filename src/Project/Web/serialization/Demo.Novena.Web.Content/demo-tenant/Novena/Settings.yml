@@ -23,6 +23,9 @@ SharedFields:
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
   Value: Novena
+- ID: "557d5f36-6f2d-4eb6-a8ce-25f30f7b9397"
+  Hint: ServerSideRenderingEngineEditOnly
+  Value: 1
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{9AD369FD-613B-41DA-92B8-DA66B485AAD9}"
@@ -31,7 +34,7 @@ SharedFields:
   Value: "{38E761E6-409F-4714-97F4-34370FCE3F94}"
 - ID: "5e8ed724-126a-4bb7-8106-85c2d1042c9e"
   Hint: ServerSideRenderingEngineApplicationUrl
-  Value: "http://rendering:3000"
+  Value: "https://www.novena.localhost/"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
   Value: /dist/Novena
@@ -50,6 +53,9 @@ SharedFields:
 - ID: "c8d002f9-9518-4c5e-9baa-6617e13f0797"
   Hint: LayoutPath
   Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
+- ID: "e3259313-387a-41f0-b113-962f14b1aa2b"
+  Hint: LayoutServiceConfiguration
+  Value: "sxa-jss"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{926CD85D-DFAA-467C-8EE4-D8FB2202617B}"
@@ -73,11 +79,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "29643754-2eca-4279-839b-60d499ced94b"
+      Value: "b9e989fa-fae2-4207-8211-928116dae194"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221226T111101Z
+      Value: 20221228T011129Z

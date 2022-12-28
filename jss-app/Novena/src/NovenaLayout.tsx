@@ -18,14 +18,11 @@ interface LayoutProps {
 
 interface RouteFields {
   [key: string]: unknown;
-  pageTitle: Field;
+  Title: Field;
 }
 
 const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
-
-  console.log('Layout data');
-  console.log(layoutData);
 
   const fields = route?.fields as RouteFields;
 
@@ -33,14 +30,14 @@ const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
     <>
       <Scripts />
       <Head>
-        <title>{(fields && fields.pageTitle && fields.pageTitle.value.toString()) || 'Page'}</title>
+        <title>{(fields && fields.Title && fields.Title.value.toString()) || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <header>{route && <Placeholder name="novena-jss-header" rendering={route} />}</header>
-      {route && <Placeholder name="novena-jss-main" rendering={route} />}
-      <footer>{route && <Placeholder name="novena-jss-footer" rendering={route} />}</footer>
+      <header>{route && <Placeholder name="headless-header" rendering={route} />}</header>
+      {route && <Placeholder name="headless-main" rendering={route} />}
+      <footer>{route && <Placeholder name="headless-footer" rendering={route} />}</footer>
     </>
   );
 };

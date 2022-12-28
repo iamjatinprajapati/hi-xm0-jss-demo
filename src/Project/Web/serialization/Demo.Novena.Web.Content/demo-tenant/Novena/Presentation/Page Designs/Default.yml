@@ -1,19 +1,12 @@
 ﻿---
-ID: "d4395630-8b99-467f-985d-fc332f0071ca"
-Parent: "59b41b5f-e22e-460b-941e-fb64fe8da8fc"
-Template: "a6868d65-d612-401f-a40a-cd5ba0857b81"
-Path: /sitecore/system/Settings/Services/API Keys/Novena
+ID: "31f00174-98be-4c66-aa6a-1234742bf45c"
+Parent: "048d234f-9e9a-4b25-9211-dfb75435b7b9"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: "/sitecore/content/demo-tenant/Novena/Presentation/Page Designs/Default"
 SharedFields:
-- ID: "1e7a5aa7-a27d-46fa-bd93-1bfe3c04efe2"
-  Hint: Impersonation User
-  Value: |
-    extranet\anonymous
-- ID: "780c8e48-fe03-4a73-90dc-9bb5296b95d7"
-  Hint: CORS Origins
-  Value: *
-- ID: "99ba91ec-f0d3-4372-b638-67c2402a2484"
-  Hint: AllowedControllers
-  Value: *
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "{D09CB3C3-6A0C-4EFF-B233-383396C4B7BE}"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +14,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221226T115445Z
+      Value: 20221227T081929Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -32,11 +25,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7fe4469f-f675-4e36-84e1-977fbb45e076"
+      Value: "6e297457-0d2e-45ce-9d51-6674282ecfd4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221227T055602Z
+      Value: 20221228T005607Z

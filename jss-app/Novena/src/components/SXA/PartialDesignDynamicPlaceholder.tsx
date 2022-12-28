@@ -9,7 +9,6 @@ const PartialDesignDynamicPlaceholder = (props: DynamicPlaceholderProps): JSX.El
   // console.log(props);
   return (
     <>
-      <span>Dynamic</span>
       <Placeholder name={props.rendering?.params?.sig || ''} rendering={props.rendering} />
     </>
   );

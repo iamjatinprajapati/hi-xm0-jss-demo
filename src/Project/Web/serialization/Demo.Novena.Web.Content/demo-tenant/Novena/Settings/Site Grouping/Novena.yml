@@ -13,13 +13,13 @@ SharedFields:
   Value: cm.novena.localhost
 - ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
   Hint: SiteName
-  Value: Novena
+  Value: novena
 - ID: "da06d09e-02b6-464a-80fc-9d8d7fc875e3"
   Hint: Environment
   Value: *
 - ID: "e5b5ccb5-17a1-429d-bd3e-6122b3216e52"
   Hint: TargetHostName
-  Value: cm.novena.localhost
+  Value: 
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{23E42340-77BE-49FC-A7C4-77D3CB545223}"
@@ -41,14 +41,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7a88d44c-fd4b-436b-b367-befe22503680"
+      Value: "ed1e75d3-f70a-4dd5-b33a-91ab1e09ff2a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221226T111123Z
+      Value: 20221228T022432Z
     - ID: "f57099a3-526a-49f2-aebd-635453e48875"
       Hint: RenderingHost
       Value: Default
