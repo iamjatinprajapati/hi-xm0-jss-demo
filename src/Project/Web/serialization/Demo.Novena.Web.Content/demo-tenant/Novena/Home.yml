@@ -24,34 +24,42 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{08E58CB1-B072-456E-9182-4555AA8BE233}"
+              uid="{09590FD1-3829-4D88-BD22-29742300EE48}"
               p:before="*"
               s:ds="{3A30F6D0-72CA-405C-AEB9-09C8351CB789}"
               s:id="{C4D576E5-DBD4-485C-AF0E-C424A3F82A78}"
               s:par=""
-              s:ph="/headless-main/container-1"
+              s:ph="/headless-main/novena-jss-features-{0332CED7-CEA8-4501-96FA-9BFB0EE61CA4}-0"
               s:ccb="Clear on publish" />
             <r
-              uid="{0486EA62-A6A3-4AAE-ADBA-F6B0322F0184}"
-              p:after="r[@uid='{08E58CB1-B072-456E-9182-4555AA8BE233}']"
+              uid="{EA2490EA-49FE-4F68-A423-6C3088F3D746}"
+              p:after="r[@uid='{09590FD1-3829-4D88-BD22-29742300EE48}']"
               s:ds="{0097D7CF-7518-4063-80C3-680210348E33}"
               s:id="{C4D576E5-DBD4-485C-AF0E-C424A3F82A78}"
               s:par=""
-              s:ph="/headless-main/container-1"
+              s:ph="/headless-main/novena-jss-features-{0332CED7-CEA8-4501-96FA-9BFB0EE61CA4}-0"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{DEA8264E-F7ED-490E-AB6E-4154520C49CD}"
+              p:after="r[@uid='{EA2490EA-49FE-4F68-A423-6C3088F3D746}']"
+              s:ds="{5971649A-21E8-40D2-A894-01E808ABE664}"
+              s:id="{C4D576E5-DBD4-485C-AF0E-C424A3F82A78}"
+              s:par=""
+              s:ph="/headless-main/novena-jss-features-{0332CED7-CEA8-4501-96FA-9BFB0EE61CA4}-0"
               s:ccb="Clear on publish" />
             <r
               uid="{5A3E968F-69FE-4FE1-94A0-4C50871CBA87}"
-              p:after="r[@uid='{0486EA62-A6A3-4AAE-ADBA-F6B0322F0184}']"
+              p:after="r[@uid='{DEA8264E-F7ED-490E-AB6E-4154520C49CD}']"
               s:ds="{E906DA6E-E8BD-4E01-99EF-560CB42AE2E8}"
               s:id="{5DC6A6D7-19D7-418C-AB84-7CE5C38AAF68}"
               s:par=""
               s:ph="headless-main"
               s:ccb="Clear on publish" />
             <r
-              uid="{6A9DD2A7-E721-4F55-B30C-D6088EFB412A}"
+              uid="{0332CED7-CEA8-4501-96FA-9BFB0EE61CA4}"
               p:after="*[1=2]"
-              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
-              s:par="GridParameters&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7BA894F98A-B443-4BE5-A45D-0885230D06F4%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:id="{6B02D70F-59A7-4682-8114-628F63A6CC90}"
+              s:par="CacheClearingBehavior=Clear on publish"
               s:ph="headless-main" />
           </d>
         </r>
@@ -74,11 +82,11 @@ Languages:
       Value: Novena
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b054ecc9-f563-4025-938e-b95ae2de85b1"
+      Value: "59be7553-08ac-4b11-893a-8d578ed4fe3b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221228T153655Z
+      Value: 20221229T103941Z

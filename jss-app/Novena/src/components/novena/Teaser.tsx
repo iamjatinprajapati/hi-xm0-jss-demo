@@ -31,9 +31,15 @@ const Teaser = (props: TeaserProps): JSX.Element => {
         </div>
         <Text field={props.fields.TagLine} tag="span" />
         <Text field={props.fields.Heading} tag="h4" className="mb-3" />
-        <RichText field={props.fields.Text} tag="p" className="mb-4" />
+        <RichText field={props.fields.Text} className="mb-4" />
         {props.fields.CTA && props.fields.CTA.value && props.fields.CTA.value.href !== '' && (
-          <Link field={props.fields.CTA} className="btn btn-main btn-round-full" />
+          <Link
+            field={props.fields.CTA}
+            className="btn btn-main btn-round-full"
+            showLinkTextWithChildrenPresent={true}
+          >
+            <i className="icofont-simple-right ml-3"></i>
+          </Link>
         )}
       </div>
     </>
