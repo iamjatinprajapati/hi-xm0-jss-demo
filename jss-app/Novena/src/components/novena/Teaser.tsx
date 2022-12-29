@@ -22,12 +22,11 @@ type TeaserProps = ComponentProps & {
 };
 
 const Teaser = (props: TeaserProps): JSX.Element => {
-  console.log(props);
   return (
     <>
       <div className="feature-item mb-5 mb-lg-0">
         <div className="feature-icon mb-4">
-          {props.fields?.IconClass?.value && <i className={props.fields.IconClass.value}></i>}
+          {props.fields?.IconClass?.value && <i className={props.fields.IconClass.value || ''}></i>}
         </div>
         <Text field={props.fields.TagLine} tag="span" />
         <Text field={props.fields.Heading} tag="h4" className="mb-3" />

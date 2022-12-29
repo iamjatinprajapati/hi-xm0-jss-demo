@@ -20,7 +20,6 @@ type HeroProps = ComponentProps & {
   fields: HeroFields;
 };
 const Hero = (props: HeroProps): JSX.Element => {
-  console.log(props.fields);
   return (
     <>
       <section

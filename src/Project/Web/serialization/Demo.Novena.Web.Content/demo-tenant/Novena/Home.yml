@@ -57,10 +57,18 @@ Languages:
               s:ccb="Clear on publish" />
             <r
               uid="{0332CED7-CEA8-4501-96FA-9BFB0EE61CA4}"
-              p:after="*[1=2]"
+              p:after="r[@uid='{5A3E968F-69FE-4FE1-94A0-4C50871CBA87}']"
               s:id="{6B02D70F-59A7-4682-8114-628F63A6CC90}"
               s:par="CacheClearingBehavior=Clear on publish"
               s:ph="headless-main" />
+            <r
+              uid="{AA3FC394-45F6-45EF-859E-152D126932EF}"
+              p:after="*[1=2]"
+              s:ds="{5DECEEF6-FFED-4BED-B8FD-D15BDF467E81}"
+              s:id="{366D6EB6-F923-40D0-910B-B85CBBD3FE5B}"
+              s:par=""
+              s:ph="headless-main"
+              s:ccb="Clear on publish" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -82,11 +90,11 @@ Languages:
       Value: Novena
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "59be7553-08ac-4b11-893a-8d578ed4fe3b"
+      Value: "4f7febeb-3175-423c-9cdb-7262bbc5125c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221229T103941Z
+      Value: 20221229T152541Z
