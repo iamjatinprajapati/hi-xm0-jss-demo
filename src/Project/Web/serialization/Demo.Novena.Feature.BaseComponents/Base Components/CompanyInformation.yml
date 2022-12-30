@@ -1,20 +1,27 @@
 ﻿---
-ID: "31f00174-98be-4c66-aa6a-1234742bf45c"
-Parent: "048d234f-9e9a-4b25-9211-dfb75435b7b9"
-Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
-Path: "/sitecore/content/demo-tenant/Novena/Presentation/Page Designs/Default"
+ID: "6d1feb86-fc72-49c7-8b94-a0c5c0fd542b"
+Parent: "1c8aee8f-f212-4638-813f-dbaf3efbafa7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/Base Components/CompanyInformation
 SharedFields:
-- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
-  Hint: PartialDesigns
-  Value: "{D09CB3C3-6A0C-4EFF-B233-383396C4B7BE}|{105AD32D-BA6A-4468-8520-C94FCDDE03E7}"
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: CompanyInformation
+- ID: "7d8ae35f-9ed1-43b5-96a2-0a5f040d4e4e"
+  Hint: Open Properties after Add
+  Value: 1
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Company information
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221227T081929Z
+      Value: 20221230T063519Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -25,11 +32,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a7a04016-39bf-48fa-9edd-420e2ec89d46"
+      Value: "dbf08aa3-c1a6-4506-bea0-8b4f781ee0d9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221230T063811Z
+      Value: 20221230T063613Z

@@ -1,0 +1,33 @@
+﻿---
+ID: "3746bfd7-66d8-4ac1-9e96-c6bf21522804"
+Parent: "2240afa2-9e0a-4696-9443-c7b576f8a426"
+Template: "b8cf018d-3200-44d6-b27c-c1e16a235db8"
+Path: "/sitecore/content/demo-tenant/Novena/Home/support/faq-questions"
+SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: "{D063E9D1-C7B5-4B1E-B31E-69886C9C59F5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221230T144101Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: FAQuestions
+    - ID: "8c5d4fbc-bc92-48e8-8df4-df41fe6b9c45"
+      Hint: Title
+      Value: FAQuestions
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "70f0b7b3-b8ee-47e7-bac8-88038e28c5d8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221230T144112Z

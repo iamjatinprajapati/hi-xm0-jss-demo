@@ -7,6 +7,15 @@ SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
   Value: header
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        s:l="{A8816E37-CD1D-4A33-A3EB-030B3DDF4D19}" />
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -63,11 +72,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "de817a85-cd90-4b9a-8a6a-bd6ce6a08568"
+      Value: "57505dc9-326d-4405-9cb3-6da919fdee15"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221228T143136Z
+      Value: 20221230T064105Z

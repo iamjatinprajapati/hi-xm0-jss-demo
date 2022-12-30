@@ -188,21 +188,25 @@ const NavigationList = (props: NavigationProps) => {
     <li
       className={props.fields.Styles.concat('rel-level' + props.relativeLevel)
         .concat('nav-item')
+        .concat(children.length > 0 ? 'dropdown' : '')
         .join(' ')}
       key={props.fields.Id}
       tabIndex={0}
     >
       <div className="navigation-title">
         <Link
-          className="nav-link"
+          className={`nav-link ${children.length > 0 ? 'dropdown-toggle' : ''}`}
           field={getLinkField(props)}
           editable={sitecoreContext.pageEditing}
           onClick={props.handleClick}
+          data-toggle="dropdown"
         >
           {getNavigationText(props)}
         </Link>
       </div>
-      {children.length > 0 ? <ul className="clearfix">{children}</ul> : null}
+      {children.length > 0 ? (
+        <ul className={`clearfix ${props.relativeLevel > 0 ? 'dropdown-menu' : ''}`}>{children}</ul>
+      ) : null}
     </li>
   );
 };

@@ -1,13 +1,13 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Web.Project.Layout\Novena.yml
-ID: "3b433b36-bf63-4597-bc13-0eea1a8551af"
-Parent: "da04b275-8838-4a3a-afee-817cf1fdd2eb"
-Template: "93227c5d-4fef-474d-94c0-f252ec8e8219"
-Path: /sitecore/layout/Layouts/Project/Novena
-Signature: UMad9d2PC2cDIEMRmYWXyeetrd4GK1nIv6D4IVisU3I=
-Modified: 638076525362325537
+  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Web.Project.Layout\Novena\Default.yml
+ID: "a8816e37-cd1d-4a33-a3eb-030b3ddf4d19"
+Parent: "3b433b36-bf63-4597-bc13-0eea1a8551af"
+Template: "35c61e90-47dd-43dd-83a8-d1c4d5119720"
+Path: /sitecore/layout/Layouts/Project/Novena/Default
+Signature: CMmj22lU7mkv61mtSb2b6e/WooHrZd5I+zEx64YfWjA=
+Modified: 638080120138521793
 ---
 File: |
   C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Web.Project.Layout\Novena\SXA Headless Layout.yml
@@ -19,10 +19,10 @@ Signature: k0AXUsolD5EAZwzHBRjMOpExG7K/4zV9pADyWUo7XOs=
 Modified: 638077930100725729
 ---
 File: |
-  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Web.Project.Layout\Novena\Default.yml
-ID: "a8816e37-cd1d-4a33-a3eb-030b3ddf4d19"
-Parent: "3b433b36-bf63-4597-bc13-0eea1a8551af"
-Template: "35c61e90-47dd-43dd-83a8-d1c4d5119720"
-Path: /sitecore/layout/Layouts/Project/Novena/Default
-Signature: cwTafQIVIGSe0USJWvutL81Yr+mVQrBqgNWVdf33puw=
-Modified: 638077930100690335
+  C:\jss\xm0-jss-demo\src\Project\Web\serialization\Demo.Novena.Web.Project.Layout\Novena.yml
+ID: "3b433b36-bf63-4597-bc13-0eea1a8551af"
+Parent: "da04b275-8838-4a3a-afee-817cf1fdd2eb"
+Template: "93227c5d-4fef-474d-94c0-f252ec8e8219"
+Path: /sitecore/layout/Layouts/Project/Novena
+Signature: UMad9d2PC2cDIEMRmYWXyeetrd4GK1nIv6D4IVisU3I=
+Modified: 638076525362325537

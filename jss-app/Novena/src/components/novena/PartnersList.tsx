@@ -21,7 +21,6 @@ interface PartnerProps {
 }
 
 const ParntersList = (props: PartnersListProps): JSX.Element => {
-  console.log(props.fields.Partners);
   return (
     <section className="section clients">
       <div className="container">

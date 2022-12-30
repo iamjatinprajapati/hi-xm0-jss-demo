@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import {
   Placeholder,
@@ -22,6 +22,11 @@ interface RouteFields {
 }
 
 const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
+  useEffect(() => {
+    require('assets/plugins/jquery/jquery.js');
+    require('assets/plugins/bootstrap/js/bootstrap.min.js');
+  }, []);
+
   const { route } = layoutData.sitecore;
 
   const fields = route?.fields as RouteFields;
@@ -37,7 +42,16 @@ const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
       {/* root placeholder for the app, which we add components to using route data */}
       <header>{route && <Placeholder name="headless-header" rendering={route} />}</header>
       {route && <Placeholder name="headless-main" rendering={route} />}
-      <footer>{route && <Placeholder name="headless-footer" rendering={route} />}</footer>
+      <footer className="footer section gray-bg">
+        <div className="container">
+          <div className="row">
+            {route && <Placeholder name="novena-headless-footer-top" rendering={route} />}
+          </div>
+          <div className="footer-btm py-4 mt-5">
+            {route && <Placeholder name="novena-headless-footer-bottom" rendering={route} />}
+          </div>
+        </div>
+      </footer>
     </>
   );
 };

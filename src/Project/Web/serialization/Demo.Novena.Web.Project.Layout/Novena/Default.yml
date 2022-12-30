@@ -6,7 +6,11 @@ Path: /sitecore/layout/Layouts/Project/Novena/Default
 SharedFields:
 - ID: "80334869-86dc-4472-aa89-44cf1b2f6c9b"
   Hint: Placeholders
-  Value: 
+  Value: |
+    {21F39740-9A0D-40D1-8341-0896179C9A1B}
+    {284D388A-9D4E-4742-A298-EC6871592D4B}
+    {FF189C36-85F9-43C3-91C1-62E0015997F5}
+    {F69B39A4-37CD-4BBB-B0DD-68C31CFDBBB9}
 Languages:
 - Language: en
   Versions:
@@ -25,11 +29,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7c2cd2cc-9c2f-48a5-97c4-afd6c7404122"
+      Value: "a2f4cb02-0c4c-4f12-b7c0-4c74fcb1ff52"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221228T005836Z
+      Value: 20221230T062946Z
