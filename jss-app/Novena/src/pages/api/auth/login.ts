@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import config from 'temp/config';
 import queryString from 'query-string';
+import nookies, { parseCookies } from 'nookies';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   console.log(req.body);
   const loginEndpoint = `${config.sitecoreApiHost}/sitecore/api/ssc/auth/login?sc_apikey=${config.sitecoreApiKey}`;
-  //   const loginEndpoint = `https://cm.novena.localhost/sitecore/api/ssc/auth/login?sc_apikey=${config.sitecoreApiKey}`;
 
   console.log(loginEndpoint);
   const data = {
@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     method: 'POST',
     body: queryString.stringify(data),
   });
-  console.log(response);
+  // const parsedCookies = parseCookies();
+  res.setHeader('set-cookie', response.headers.get('set-cookie'));
   res.status(200).json({ data: true });
 }

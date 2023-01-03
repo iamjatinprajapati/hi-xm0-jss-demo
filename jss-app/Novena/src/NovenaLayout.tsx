@@ -26,7 +26,7 @@ const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
     require('assets/plugins/jquery/jquery.js');
     require('assets/plugins/bootstrap/js/bootstrap.min.js');
   }, []);
-
+  console.log(layoutData);
   const { route } = layoutData.sitecore;
 
   const fields = route?.fields as RouteFields;

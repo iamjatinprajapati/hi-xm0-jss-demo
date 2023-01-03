@@ -50,14 +50,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6e41b776-6d52-4c50-8589-dcb07baa3feb"
+      Value: "c9f63229-af45-455d-9d40-43484d0f632b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230102T082926Z
+      Value: 20230103T090939Z
     - ID: "f57099a3-526a-49f2-aebd-635453e48875"
       Hint: RenderingHost
       Value: Default
