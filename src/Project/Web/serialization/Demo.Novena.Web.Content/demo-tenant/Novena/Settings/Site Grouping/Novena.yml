@@ -8,9 +8,15 @@ SharedFields:
 - ID: "1ee576af-ba8e-4312-9fbd-2ccf8395baa1"
   Hint: StartItem
   Value: "{7F7040CB-C096-4183-9E0B-4BF5AE4B3E72}"
+- ID: "602ab79d-fc25-4c5b-89d3-27aaef3bb37c"
+  Hint: LoginPage
+  Value: "{36BF35B7-FD1E-4C26-BA77-59799490F4C8}"
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
   Value: cm.novena.localhost
+- ID: "995a8168-a8a9-4563-bdc9-94e3148f8ee8"
+  Hint: RequireLogin
+  Value: 1
 - ID: "b59e43ab-84da-49f3-87a1-d2fcf648365b"
   Hint: Scheme
   Value: https
@@ -44,14 +50,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4b40b4f8-1e6c-4cae-9d91-9a2d506146ed"
+      Value: "6e41b776-6d52-4c50-8589-dcb07baa3feb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221229T063757Z
+      Value: 20230102T082926Z
     - ID: "f57099a3-526a-49f2-aebd-635453e48875"
       Hint: RenderingHost
       Value: Default

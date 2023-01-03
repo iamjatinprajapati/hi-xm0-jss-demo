@@ -198,8 +198,7 @@ const NavigationList = (props: NavigationProps) => {
           className={`nav-link ${children.length > 0 ? 'dropdown-toggle' : ''}`}
           field={getLinkField(props)}
           editable={sitecoreContext.pageEditing}
-          onClick={props.handleClick}
-          data-toggle="dropdown"
+          // onClick={props.handleClick}
         >
           {getNavigationText(props)}
         </Link>

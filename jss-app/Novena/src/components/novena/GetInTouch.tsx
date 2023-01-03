@@ -16,7 +16,6 @@ type GetInTouchProps = ComponentProps & {
   };
 };
 const GetInTouch = (props: GetInTouchProps): JSX.Element => {
-  console.log(props.fields);
   return (
     <>
       <div className="col-lg-3 col-md-6 col-sm-6">

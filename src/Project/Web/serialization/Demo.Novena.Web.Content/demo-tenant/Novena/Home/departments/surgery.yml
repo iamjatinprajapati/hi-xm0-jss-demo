@@ -1,7 +1,7 @@
 ﻿---
 ID: "7623bf24-a68a-4fdb-9eda-17c722655f67"
 Parent: "0a411c5b-0d0b-431c-bbd2-dbf4c72916da"
-Template: "b8cf018d-3200-44d6-b27c-c1e16a235db8"
+Template: "51f88703-1880-4e9d-8bc9-b0da310ca074"
 Path: "/sitecore/content/demo-tenant/Novena/Home/departments/surgery"
 SharedFields:
 - ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
@@ -18,16 +18,16 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: surgery
-    - ID: "8c5d4fbc-bc92-48e8-8df4-df41fe6b9c45"
-      Hint: Title
-      Value: Surgery
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dee4782c-3276-4be2-878c-5e751e8f90f4"
+      Value: "ce26f546-c0a9-475c-8146-2faab16f8018"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221230T143755Z
+      Value: 20230102T064036Z
+    - ID: "e3be3972-1804-40ef-9e06-ae2c9daeb61a"
+      Hint: Title
+      Value: Surgery

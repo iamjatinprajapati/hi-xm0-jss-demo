@@ -14,7 +14,6 @@ type CompanyInformationProps = ComponentProps & {
   };
 };
 const CompanyInformation = (props: CompanyInformationProps): JSX.Element => {
-  console.log(props);
   return (
     <>
       <div className="col-lg-4 mr-auto col-sm-6">

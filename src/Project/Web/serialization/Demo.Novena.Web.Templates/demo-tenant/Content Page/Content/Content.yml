@@ -1,8 +1,18 @@
 ﻿---
-ID: "33b19fd9-ba16-4460-8d45-4a1898ce3d99"
-Parent: "b8cf018d-3200-44d6-b27c-c1e16a235db8"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: "/sitecore/templates/Project/demo-tenant/Page/Content"
+ID: "62c105be-d159-4819-94d5-5bf1ad42b4b1"
+Parent: "a8a6951c-e85d-4541-ba00-68706a694c9e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: "/sitecore/templates/Project/demo-tenant/Content Page/Content/Content"
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$xaRichTextProfile"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Rich Text
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2
 Languages:
 - Language: en
   Versions:
@@ -21,11 +31,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "78136f47-443c-4eb3-9f64-e1d99120fcbb"
+      Value: "1e2abf6e-fd9f-433d-bc36-ff07bf72e531"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221226T101945Z
+      Value: 20230102T051640Z

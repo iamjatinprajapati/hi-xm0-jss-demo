@@ -1,8 +1,8 @@
 ﻿---
-ID: "b8cf018d-3200-44d6-b27c-c1e16a235db8"
+ID: "51f88703-1880-4e9d-8bc9-b0da310ca074"
 Parent: "926cd85d-dfaa-467c-8ee4-d8fb2202617b"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: "/sitecore/templates/Project/demo-tenant/Page"
+Path: "/sitecore/templates/Project/demo-tenant/Content Page"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -16,7 +16,7 @@ SharedFields:
     {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{C6B8AD25-CB95-4B82-92C8-CDE819A54662}"
+  Value: "{AFA3C711-D81E-4CB3-B0A3-CAF015FAD01D}"
 Languages:
 - Language: en
   Versions:
@@ -35,11 +35,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a3fed4de-af1a-4845-9574-62556b224dd6"
+      Value: "732d0ca5-4b88-4ddc-8f0d-1a05c36f0a35"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221226T101945Z
+      Value: 20230102T051621Z

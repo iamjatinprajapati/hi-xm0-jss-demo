@@ -9,7 +9,7 @@ services:
         PARENT_IMAGE: ${NODEJS_PARENT_IMAGE}
         NODEJS_VERSION: ${NODEJS_VERSION}
     scale: 0
-  
+
   rendering:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-rendering:${VERSION:-latest}
     build:
