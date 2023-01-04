@@ -1,11 +1,11 @@
 {
-  "namespace": "Demo.Foundation.Multisite",
+  "namespace": "Demo.Novena.Foundation.Multisite",
   "items": {
     "includes": [
       {
         "allowedPushOperations": "createUpdateAndDelete",
         "database": "master",
-        "name": "Demo.Foundation.Multisite.Templates",
+        "name": "Templates",
         "path": "/sitecore/templates/Foundation/Multisite",
         "scope": "itemAndDescendants"
       }
