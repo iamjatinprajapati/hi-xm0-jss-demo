@@ -11,4 +11,5 @@ FROM ${PARENT_IMAGE} as debug
 WORKDIR /app
 
 EXPOSE 3000
-ENTRYPOINT "npm run start:connected"
+# RUN "npm install"
+ENTRYPOINT "npm install && npm run start:connected"

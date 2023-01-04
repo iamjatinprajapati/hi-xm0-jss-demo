@@ -111,17 +111,15 @@ function Start-Docker {
         [ValidateNotNullOrEmpty()]
         [string] 
         $DockerRoot = ".\docker",
-        [Switch]
-        $Build,
-        [Switch]$BuildOnly
+        [Switch]$SkipBuild
     )
     if (!(Test-Path ".\docker-compose.yml")) {
         Push-Location $DockerRoot
     }
 
-    if ($Build) {
-        docker-compose build
-    }
+    # if ($Build) {
+    #     docker-compose build
+    # }
     $command = "docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose.solr-init.override.yml"
 
     if ((Get-EnvValueByKey 'HAS_HEADLESS_APP') -eq "true") {
@@ -131,22 +129,18 @@ function Start-Docker {
     if ((Get-EnvValueByKey "ADD_CD") -eq "true") {
         $command = $command + " -f docker-compose.cd.override.yml"
     }
-
-    if ($BuildOnly) {
-        $command = $command + " build"    
+    if(-Not $SkipBuild) {
+        $cmd = $command + " build"
+        Invoke-Expression $cmd
     }
-    else {
-        $command = $command + " up -d"
-    }    
+    $command = $command + " up -d"  
     if ((Get-EnvValueByKey "FORCE_RECREATE") -eq "true") {
         $command = $command + " --force-recreate"
     }
     Write-Host "Executing: " $command
     Invoke-Expression $command
     Pop-Location
-    if ($BuildOnly) {
-        return
-    }
+    
     Write-Host "Waiting for CM to become available..." -ForegroundColor Green
     $startTime = Get-Date
 
