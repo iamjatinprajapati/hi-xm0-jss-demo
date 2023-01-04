@@ -1,28 +1,41 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import config from 'temp/config';
 import queryString from 'query-string';
-import nookies, { parseCookies } from 'nookies';
+import { AxiosDataFetcher, AxiosDataFetcherConfig } from '@sitecore-jss/sitecore-jss-nextjs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
-  console.log(req.body);
-  const loginEndpoint = `${config.sitecoreApiHost}/sitecore/api/ssc/auth/login?sc_apikey=${config.sitecoreApiKey}`;
+  const { response, error } = await login(req.body.username, req.body.password);
+  if (response) {
+    const cookies = response.headers['set-cookie'];
+    res.setHeader('set-cookie', cookies);
+    res.status(200).json({ data: true });
+  } else {
+    console.log(error.response);
+    res.status(401).json({ data: false });
+  }
+}
 
-  console.log(loginEndpoint);
+const login = async (userName: string, password: string) => {
   const data = {
     domain: 'extranet',
-    username: req.body.username,
-    password: req.body.password,
+    username: userName,
+    password: password,
   };
-  const response = await fetch(loginEndpoint, {
+  console.log(data);
+  const axiosConfig: AxiosDataFetcherConfig = {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    credentials: 'include',
+    withCredentials: true,
     method: 'POST',
-    body: queryString.stringify(data),
-  });
-  // const parsedCookies = parseCookies();
-  res.setHeader('set-cookie', response.headers.get('set-cookie'));
-  res.status(200).json({ data: true });
-}
+  };
+  const axiosDataFetcher = new AxiosDataFetcher(axiosConfig);
+  const loginEndpoint = `${config.sitecoreApiHost}/sitecore/api/ssc/auth/login?sc_apikey=${config.sitecoreApiKey}`;
+  try {
+    const response = await axiosDataFetcher.post(loginEndpoint, queryString.stringify(data));
+    return { response };
+  } catch (error) {
+    return { error };
+  }
+};
