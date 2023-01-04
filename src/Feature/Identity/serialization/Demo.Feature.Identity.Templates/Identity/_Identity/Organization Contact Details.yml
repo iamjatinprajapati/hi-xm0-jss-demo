@@ -1,15 +1,8 @@
 ﻿---
-ID: "cf96ebde-83fc-43d4-b89a-904304710e7a"
-Parent: "c8fb67e6-dfad-4c32-9996-cf70c22e0460"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Identity/_Identity/Organization Contact Details/Email
-SharedFields:
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: "Single-Line Text"
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 200
+ID: "c8fb67e6-dfad-4c32-9996-cf70c22e0460"
+Parent: "10315811-2d1e-4d10-86b7-e9b49a032cbe"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Identity/_Identity/Organization Contact Details
 Languages:
 - Language: en
   Versions:
@@ -28,11 +21,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dab054c0-9bc9-4db2-af2a-aefdbe695e74"
+      Value: "e9554b36-e105-4143-ad39-6e5378fe09cb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221226T111225Z
+      Value: 20221229T134013Z

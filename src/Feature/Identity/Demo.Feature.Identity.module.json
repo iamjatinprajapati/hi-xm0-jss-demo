@@ -6,7 +6,7 @@
         "allowedPushOperations": "createUpdateAndDelete",
         "database": "master",
         "name": "Demo.Feature.Identity.Templates",
-        "path": "/sitecore/templates/Feature/Identity/_Identity",
+        "path": "/sitecore/templates/Feature/Identity",
         "scope": "itemAndDescendants"
       }
     ]

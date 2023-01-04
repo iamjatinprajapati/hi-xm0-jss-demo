@@ -1,8 +1,7 @@
 #Requires -RunAsAdministrator
-param(
-    [switch]$Build,
+param(    
     [switch]$StopBeforeStarting,
-    [switch]$BuildOnly
+    [switch]$SkipBuild
 )
 
 Import-Module -Name (Join-Path $PSScriptRoot "tools\cli") -Force
@@ -20,13 +19,19 @@ Initialize-Certificates -hostDomain $hostDomain
 Write-Host "Stopping IIS..." -ForegroundColor Yellow
 iisreset.exe /stop
   
-if ($Build) {
-    Start-Docker -Build
-}
-elseif ($BuildOnly) {
-    Start-Docker -BuildOnly
+if ($SkipBuild) {
+    Start-Docker -SkipBuild
 }
 else {
     Start-Docker
 }
+# if ($Build) {
+    
+# }
+# elseif ($BuildOnly) {
+#     Start-Docker -BuildOnly
+# }
+# else {
+#     Start-Docker
+# }
   

@@ -20,7 +20,7 @@ services:
     volumes:
       - ${RENDERING_APP_LOCAL_PATH}:C:\app
     ports:
-      - "3000:3000"
+      - "3030:3000"
     environment:
       SITECORE_API_HOST: "http://cm"
       NEXTJS_DIST_DIR: ".next-container"
