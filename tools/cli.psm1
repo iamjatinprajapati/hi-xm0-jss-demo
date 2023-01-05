@@ -111,15 +111,15 @@ function Start-Docker {
         [ValidateNotNullOrEmpty()]
         [string] 
         $DockerRoot = ".\docker",
-        [Switch]$SkipBuild
+        [bool]$SkipBuild,
+        [bool]$SkipIndexing,
+        [bool]$SkipPush,
+        [bool]$SkipOpen
     )
     if (!(Test-Path ".\docker-compose.yml")) {
         Push-Location $DockerRoot
     }
 
-    # if ($Build) {
-    #     docker-compose build
-    # }
     $command = "docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose.solr-init.override.yml"
 
     if ((Get-EnvValueByKey 'HAS_HEADLESS_APP') -eq "true") {
@@ -129,7 +129,8 @@ function Start-Docker {
     if ((Get-EnvValueByKey "ADD_CD") -eq "true") {
         $command = $command + " -f docker-compose.cd.override.yml"
     }
-    if(-Not $SkipBuild) {
+
+    if ($SkipBuild -eq $false) {
         $cmd = $command + " build"
         Invoke-Expression $cmd
     }
@@ -140,7 +141,7 @@ function Start-Docker {
     Write-Host "Executing: " $command
     Invoke-Expression $command
     Pop-Location
-    
+        
     Write-Host "Waiting for CM to become available..." -ForegroundColor Green
     $startTime = Get-Date
 
@@ -160,15 +161,64 @@ function Start-Docker {
         Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."
     }
 
-    Write-Host "...now wait for about 20 to 25 seconds to make sure Traefik is ready...`n`n`n" -ForegroundColor DarkYellow
-    Write-Host "`ndon't forget to ""Populate Solr Managed Schema"" from the Control Panel`n`n`n" -ForegroundColor Yellow
-    Write-Host "`nIf the request fails with a 404 on the first attempt then the dance wasn't long enough - just hit refresh..`n`n" -ForegroundColor DarkGray
-    $cmUrl = Get-EnvValueByKey 'CM_HOST'
-    Start-Process "https://$cmUrl/sitecore/login"
-    if ((Get-EnvValueByKey 'HAS_HEADLESS_APP') -eq "true") {
-        $renderingHost = Get-EnvValueByKey 'RENDERING_HOST'
-        Start-Process "https://$renderingHost"
+    $idHost = Get-EnvValueByKey "ID_HOST"
+    $cmHost = Get-EnvValueByKey "CM_HOST"
+
+    if (Test-Path ".\sitecore.json") {
+        Write-Host "Restoring Sitecore CLI..." -ForegroundColor Green
+        dotnet tool restore
+
+        Write-Host "Installing Sitecore CLI plugins..."
+        dotnet sitecore --help | Out-Null
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Unexpected error installing Sitecore CLI Plugins"
+        }
+
+        Write-Host "Logging into Sitecore..." -ForegroundColor Green
+        
+        dotnet sitecore login --authority https://$idHost --cm https://$cmHost --allow-write true
+
+        if (-not $SkipPush) {
+            # Deploy the serialised content items
+            Write-Host "Pushing items to Sitecore..." -ForegroundColor Green
+            dotnet sitecore ser push
+            if ($LASTEXITCODE -ne 0) {
+                Write-Error "Serialization push failed, see errors above."
+            }
+        }
     }
+    
+    if (-not $SkipIndexing) {
+        # Populate Solr managed schemas to avoid errors during item deploy
+        Write-Host "Populating Solr managed schema..." -ForegroundColor Green
+        dotnet sitecore index schema-populate
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Populating Solr managed schema failed, see errors above."
+        }
+
+        # Rebuild indexes
+        Write-Host "Rebuilding indexes ..." -ForegroundColor Green
+        dotnet sitecore index rebuild
+    }    
+
+    if (-not $SkipOpen) {
+        Write-Host "Opening site..." -ForegroundColor Green
+        Start-Process https://$cmHost/sitecore/
+        if ((Get-EnvValueByKey 'HAS_HEADLESS_APP') -eq "true") {
+            $renderingHost = Get-EnvValueByKey 'RENDERING_HOST'
+            Start-Process "https://$renderingHost"
+        }
+    }
+
+    # Write-Host "...now wait for about 20 to 25 seconds to make sure Traefik is ready...`n`n`n" -ForegroundColor DarkYellow
+    # Write-Host "`ndon't forget to ""Populate Solr Managed Schema"" from the Control Panel`n`n`n" -ForegroundColor Yellow
+    # Write-Host "`nIf the request fails with a 404 on the first attempt then the dance wasn't long enough - just hit refresh..`n`n" -ForegroundColor DarkGray
+    # $cmUrl = Get-EnvValueByKey 'CM_HOST'
+    # Start-Process "https://$cmUrl/sitecore/login"
+    # if ((Get-EnvValueByKey 'HAS_HEADLESS_APP') -eq "true") {
+    #     $renderingHost = Get-EnvValueByKey 'RENDERING_HOST'
+    #     Start-Process "https://$renderingHost"
+    # }
 }
 
 function Stop-Docker {
@@ -376,8 +426,7 @@ function Add-Headless {
     $fileToUpdate = Join-Path $DestinationFolder "\docker-compose.override.yml"
     ((Get-Content -Path $fileToUpdate -Raw) -replace "#HEADLESS_IMAGE", "HEADLESS_IMAGE: `${SITECORE_MODULE_REGISTRY}sitecore-headless-services-`${TOPOLOGY}-assets:`${HEADLESS_VERSION:-latest}") | Set-Content -Path $fileToUpdate
     ((Get-Content -Path $fileToUpdate -Raw) -replace "#JSS_DEPLOYMENT_SECRET", "JSS_DEPLOYMENT_SECRET: `${JSS_DEPLOYMENT_SECRET}") | Set-Content -Path $fileToUpdate
-    ((Get-Content -Path $fileToUpdate -Raw) -replace "#JSS_EDITING_SECRET", "JSS_EDITING_SECRET: `${JSS_EDITING_SECRET}") | Set-Content -Path $fileToUpdate
-    ((Get-Content -Path $fileToUpdate -Raw) -replace "#RENDERING_HOST_PUBLIC_URI", "RENDERING_HOST_PUBLIC_URI: `${RENDERING_HOST_PUBLIC_URI}") | Set-Content -Path $fileToUpdate
+    ((Get-Content -Path $fileToUpdate -Raw) -replace "#JSS_EDITING_SECRET", "JSS_EDITING_SECRET: `${JSS_EDITING_SECRET}") | Set-Content -Path $fileToUpdate    
 }
 
 # Helper functions
@@ -530,10 +579,14 @@ function Add-JSSApplication {
             "--destination", $jssProjectName,
             "--appName", $jssProjectName
         )
-        $jssCreateParams = "--templates nextjs,nextjs-styleguide --fetchWith REST --prerender SSR --hostName https://$cmHost --yes --force"
+        $jssCreateParams = "--templates nextjs,nextjs-styleguide,nextjs-sxa --fetchWith REST --prerender SSR --hostName https://$cmHost --yes --force"
         $createArgs += $jssCreateParams.Split(' ')
         Write-Host $createArgs
         npx @createArgs
+
+        # Remove .env file created along with the application
+        Write-Host "Removing .env file" -ForegroundColor Yellow
+        Remove-Item "$solutionName\.env"
     }
     finally {
         Pop-Location

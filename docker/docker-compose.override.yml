@@ -59,7 +59,6 @@ services:
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM        
       JSS_DEPLOYMENT_SECRET: ${JSS_DEPLOYMENT_SECRET}
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
-      RENDERING_HOST_PUBLIC_URI: ${RENDERING_HOST_PUBLIC_URI}
     entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
     mem_limit: ${MEMORY_LIMIT_SQL:-4GB}
 
