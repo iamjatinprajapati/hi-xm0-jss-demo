@@ -1,5 +1,6 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { useI18n } from 'next-localization';
 
 type HeaderTopBarProps = ComponentProps & {
   fields: {
@@ -10,6 +11,7 @@ type HeaderTopBarProps = ComponentProps & {
 };
 
 const HeaderTopBar = ({ fields, rendering }: HeaderTopBarProps): JSX.Element => {
+  const { t } = useI18n();
   if (rendering) {
     return (
       <div className="header-top-bar">
@@ -24,14 +26,15 @@ const HeaderTopBar = ({ fields, rendering }: HeaderTopBarProps): JSX.Element => 
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <i className="icofont-location-pin mr-2"></i>Address {fields.Address.value}
+                  <i className="icofont-location-pin mr-2"></i>
+                  {t('novena-address')} {fields.Address.value}
                 </li>
               </ul>
             </div>
             <div className="col-lg-6">
               <div className="text-lg-right top-right-bar mt-2 mt-lg-0">
                 <a href="tel:+23-345-67890">
-                  <span>Call Now : </span>
+                  <span>{t('novena-call-now')} </span>
                   <span className="h4">{fields.PhoneNumber.value}</span>
                 </a>
               </div>
