@@ -50,6 +50,10 @@ const nextConfig = {
         source: '/layouts/system/:path*',
         destination: `${jssConfig.sitecoreApiHost}/layouts/system/:path*`,
       },
+      {
+        source: '/api/jss/:path*',
+        destination: `${jssConfig.sitecoreApiHost}/api/jss/:path*`,
+      },
     ];
   },
   async headers() {

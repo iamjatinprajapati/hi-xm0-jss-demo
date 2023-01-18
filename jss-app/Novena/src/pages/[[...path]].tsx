@@ -25,6 +25,8 @@ const SitecorePage = ({ notFound, componentProps, layoutData }: SitecorePageProp
     return <NotFound />;
   }
 
+  console.log(layoutData);
+
   const isEditing = layoutData.sitecore.context.pageEditing;
   const isComponentRendering =
     layoutData.sitecore.context.renderingType === RenderingType.Component;

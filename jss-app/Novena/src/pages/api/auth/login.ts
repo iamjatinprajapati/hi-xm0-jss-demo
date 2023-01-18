@@ -4,6 +4,8 @@ import queryString from 'query-string';
 import { AxiosDataFetcher, AxiosDataFetcherConfig } from '@sitecore-jss/sitecore-jss-nextjs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  console.log('Login handler');
+  console.log(req.body);
   const { response, error } = await login(req.body.username, req.body.password);
   if (response) {
     const cookies = response.headers['set-cookie'];
@@ -32,6 +34,7 @@ const login = async (userName: string, password: string) => {
   };
   const axiosDataFetcher = new AxiosDataFetcher(axiosConfig);
   const loginEndpoint = `${config.sitecoreApiHost}/sitecore/api/ssc/auth/login?sc_apikey=${config.sitecoreApiKey}`;
+  console.log(loginEndpoint);
   try {
     const response = await axiosDataFetcher.post(loginEndpoint, queryString.stringify(data));
     return { response };

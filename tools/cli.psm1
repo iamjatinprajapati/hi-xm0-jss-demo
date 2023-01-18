@@ -113,7 +113,7 @@ function Start-Docker {
         $DockerRoot = ".\docker",
         [bool]$SkipBuild,
         [bool]$SkipIndexing,
-        [bool]$SkipPush,
+        [bool]$PushContent,
         [bool]$SkipOpen
     )
     if (!(Test-Path ".\docker-compose.yml")) {
@@ -178,7 +178,7 @@ function Start-Docker {
         
         dotnet sitecore login --authority https://$idHost --cm https://$cmHost --allow-write true
 
-        if (-not $SkipPush) {
+        if ($PushContent) {
             # Deploy the serialised content items
             Write-Host "Pushing items to Sitecore..." -ForegroundColor Green
             dotnet sitecore ser push
