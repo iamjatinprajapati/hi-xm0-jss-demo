@@ -33,7 +33,9 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "@sitecore-jss/sitecore-jss-forms": "^21.0.2",
     "@sitecore-jss/sitecore-jss-nextjs": "^21.0.2",
+    "@sitecore-jss/sitecore-jss-react-forms": "^21.0.2",
     "bootstrap": "^4.3.1",
     "graphql": "~15.8.0",
     "graphql-tag": "^2.11.0",

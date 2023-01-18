@@ -3,7 +3,7 @@ param(
     [switch]$StopBeforeStarting,
     [switch]$SkipBuild,
     [Switch]$SkipIndexing,
-    [Switch]$SkipPush,
+    [Switch]$PushContent,
     [Switch]$SkipOpen
 )
 
@@ -30,10 +30,12 @@ if (-Not $envFileExists) {
 $hostDomain = Get-EnvValueByKey 'HOST_DOMAIN'
   
 Initialize-Certificates -hostDomain $hostDomain
+
+Install-SitecoreDockerTools
   
 # Stop the IIS
 Write-Host "Stopping IIS..." -ForegroundColor Yellow
 iisreset.exe /stop
   
-Start-Docker -SkipBuild $SkipBuild -SkipPush $SkipPush -SkipIndexing $SkipIndexing -SkipOpen $SkipOpen
+Start-Docker -SkipBuild $SkipBuild -PushContent $PushContent -SkipIndexing $SkipIndexing -SkipOpen $SkipOpen
   

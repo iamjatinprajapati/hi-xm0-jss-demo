@@ -25,6 +25,7 @@ export class DictionaryServiceFactory {
           apiHost: config.sitecoreApiHost,
           apiKey: config.sitecoreApiKey,
           siteName: config.jssAppName,
+          rootItemId: '{B8CF018D-3200-44D6-B27C-C1E16A235DB8}',
         });
   }
 }
