@@ -7,6 +7,7 @@ import {
   Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import Scripts from 'src/Scripts';
+import Header from 'components/novena/Header';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore editors.
 // If you're not supporting Sitecore editors, you can remove this.
@@ -22,12 +23,13 @@ interface RouteFields {
 }
 
 const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
+  const { route } = layoutData.sitecore;
   useEffect(() => {
     require('assets/plugins/jquery/jquery.js');
     require('assets/plugins/bootstrap/js/bootstrap.min.js');
   }, []);
 
-  const { route } = layoutData.sitecore;
+  console.log(route);
 
   const fields = route?.fields as RouteFields;
 
@@ -40,8 +42,8 @@ const NovenaLayout = ({ layoutData }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <header>{route && <Placeholder name="headless-header" rendering={route} />}</header>
-      {route && <Placeholder name="headless-main" rendering={route} />}
+      <header>{route && <Placeholder name="novena-headless-header" rendering={route} />}</header>
+      {route && <Placeholder name="novena-headless-main" rendering={route} />}
       <footer className="footer section gray-bg">
         <div className="container">
           <div className="row">

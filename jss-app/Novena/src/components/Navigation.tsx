@@ -75,8 +75,11 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
     openMenu(!isOpenMenu);
   };
+  console.log(props);
+  console.log(Object.values(props.fields).length);
+  // return <div>Navigation</div>;
   let list = undefined;
-  const addRoot = Object.values(props.fields).length === 1;
+  const addRoot = Object.values(props.fields).length === 1 && props.fields[0].Children;
   if (addRoot) {
     list = Object.values(props.fields[0].Children)
       .filter((element) => element)

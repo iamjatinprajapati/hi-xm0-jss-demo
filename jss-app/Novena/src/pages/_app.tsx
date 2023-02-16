@@ -14,7 +14,7 @@ import 'assets/app.css';
 import 'assets/css/style.css';
 import 'assets/plugins/icofont/icofont.min.css';
 
-NProgress.configure({ showSpinner: false, trickleSpeed: 100 });
+NProgress.configure({ showSpinner: true, trickleSpeed: 100 });
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());

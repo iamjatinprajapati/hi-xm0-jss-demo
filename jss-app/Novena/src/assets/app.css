@@ -29,3 +29,8 @@ a[target='_blank']:after {
 .features {
   position: relative;
 }
+
+#nprogress .bar {
+  background-color: brown;
+  height: 5px;
+}
